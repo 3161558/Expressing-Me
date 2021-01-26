@@ -5,8 +5,8 @@ float easing = 0.0005;
 
 void setup(){
   smooth();
-  size(1000, 1000);
-  background(102);
+  size(1500, 1500);
+  background(102,102,0);
   frameRate(60);
   noStroke();
 }
@@ -31,10 +31,9 @@ void draw()
   rect(0, 0, width, height);
   
   fill(98.04, 99.22, 92.55);
-  ellipse(random(width), random(height), 6, 6);
+  ellipse(random(width), random(height), 8, 8);
 
-  fill(204,204,0);
-  pushMatrix();
+  fill(102,102,0);
   translate(mouseX, mouseY);
   float targetX = mouseX;
   float dx = targetX - x;
@@ -44,5 +43,4 @@ void draw()
   float dy = targetY - y;
   y += dy * easing;
   star(0, 0, 30, 70, 5);
-  popMatrix();
 }
